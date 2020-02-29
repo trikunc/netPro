@@ -1,0 +1,644 @@
+(base) Ahmads-MacBook-Air:~ arrosid$ python
+Python 3.7.3 (default, Mar 27 2019, 16:54:48) 
+[Clang 4.0.1 (tags/RELEASE_401/final)] :: Anaconda, Inc. on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+>>> 
+>>> print("IDN")
+IDN
+>>> 2*2
+4
+>>> 
+>>> 
+>>> 
+>>> print "a"
+  File "<stdin>", line 1
+    print "a"
+            ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print("a")?
+>>> print("A")
+A
+>>> 
+>>> 
+>>> nama = input("Masukkan nama anda: ")
+Masukkan nama anda: Rosid
+>>> 
+>>> 
+>>> print(nama)
+Rosid
+>>> 
+>>> 
+>>> ip_address = input("Masukkan ip address: ")
+Masukkan ip address: 192.168.1.1
+>>> 
+>>> print(ip_address)
+192.168.1.1
+>>> 
+>>> 
+>>> user = raw_input("masukkan user: ")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'raw_input' is not defined
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> nama
+'Rosid'
+>>> type(nama)
+<class 'str'>
+>>> 
+>>> 
+>>> dir(nama)
+['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+>>> 
+>>> 
+>>> nama.upper()
+'ROSID'
+>>> nama.lower()
+'rosid'
+>>> 
+>>> 
+>>> nama
+'Rosid'
+>>> 
+>>> nama_baru = nama.lower()
+>>> nama_baru
+'rosid'
+>>> 
+>>> 
+>>> 
+>>> help(nama.lower())
+No Python documentation found for 'rosid'.
+Use help() to get the interactive help utility.
+Use help(str) for help on the str class.
+
+>>> help(nama)
+No Python documentation found for 'Rosid'.
+Use help() to get the interactive help utility.
+Use help(str) for help on the str class.
+
+>>> help(dir)
+
+>>> 
+>>> 
+>>> #sdfsdfsdf
+... 
+>>> 
+>>> 
+>>> 
+>>> """safsdfsdfs
+... sdfsdfsdf
+... sdf
+... sdf
+... sdf
+... sdf
+... sdf
+... """
+'safsdfsdfs\nsdfsdfsdf\nsdf\nsdf\nsdf\nsdf\nsdf\n'
+>>> 
+>>> 
+>>> dir = "test"
+>>> 
+>>> 
+>>> dir(nama)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object is not callable
+>>> 
+>>> 
+>>> exit()
+(base) Ahmads-MacBook-Air:~ arrosid$ python
+Python 3.7.3 (default, Mar 27 2019, 16:54:48) 
+[Clang 4.0.1 (tags/RELEASE_401/final)] :: Anaconda, Inc. on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> nama = "a"
+>>> dir(a)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'a' is not defined
+>>> dir(nama)
+['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+>>> 
+>>> 
+>>> 
+>>> 
+>>> ip_list = ["192.168.1.1","192.168.1.2"]
+>>> 
+>>> data_router = {"ip":"192.168.1.1", "user":"cisco", "password":"cisco"}
+>>> 
+>>> print(ip_list[0])
+192.168.1.1
+>>> 
+>>> 
+>>> print(data_router["ip"]
+... )
+192.168.1.1
+>>> 
+>>> print(data_router["user"])
+cisco
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> nama = "Ahmad Rosid Komarudin"
+>>> nama[0]
+'A'
+>>> 
+>>> nama[-1]
+'n'
+>>> 
+>>> 
+>>> 
+>>> nama[0:5]
+'Ahmad'
+>>> nama[0:4]
+'Ahma'
+>>> nama[6:11]
+'Rosid'
+>>> nama[6:11:2]
+'Rsd'
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> nama
+'Ahmad Rosid Komarudin'
+>>> 
+>>> 
+>>> nama.split()
+['Ahmad', 'Rosid', 'Komarudin']
+>>> 
+>>> 
+>>> data = "192.168.1.1;cisco;cisco"
+>>> 
+>>> data.split()
+['192.168.1.1;cisco;cisco']
+>>> data.split("1")
+['', '92.', '68.', '.', ';cisco;cisco']
+>>> 
+>>> data.split(";")
+['192.168.1.1', 'cisco', 'cisco']
+>>> data
+'192.168.1.1;cisco;cisco'
+>>> 
+>>> data_baru = data.split(";")
+>>> 
+>>> data_baru[0]
+'192.168.1.1'
+>>> 
+>>> data_baru[1]
+'cisco'
+>>> data_baru[2]
+'cisco'
+>>> data_baru
+['192.168.1.1', 'cisco', 'cisco']
+>>> 
+>>> 
+>>> 
+>>> password = "cisco\n"
+>>> 
+>>> 
+>>> print(password)
+cisco
+
+>>> 
+>>> password
+'cisco\n'
+>>> 
+>>> 
+>>> password.strip()
+'cisco'
+>>> password = "cisco\n"
+>>> password = "\ncisco\n"
+>>> password
+'\ncisco\n'
+>>> print(password)
+
+cisco
+
+>>> password.strip()
+'cisco'
+>>> 
+>>> 
+>>> password = ".....cisco....cisco......"
+>>> password.strip(".")
+'cisco....cisco'
+>>> password.strip()
+'.....cisco....cisco......'
+>>> 
+>>> 
+>>> 
+>>> nama
+'Ahmad Rosid Komarudin'
+>>> 
+>>> 
+>>> nama.startswith("A")
+True
+>>> 
+>>> nama.startswith("a")
+False
+>>> 
+>>> 
+>>> 
+>>> 
+>>> nama
+'Ahmad Rosid Komarudin'
+>>> 
+>>> 
+>>> 
+>>> print("Halo saya 
+  File "<stdin>", line 1
+    print("Halo saya 
+                    ^
+SyntaxError: EOL while scanning string literal
+>>> 
+>>> 
+>>> print("Halo saya " + nama)
+Halo saya Ahmad Rosid Komarudin
+>>> 
+>>> 
+>>> print("Halo saya " + nama + "!")
+Halo saya Ahmad Rosid Komarudin!
+>>> 
+>>> 
+>>> print("Halo saya {}!".format(nama))
+Halo saya Ahmad Rosid Komarudin!
+>>> 
+>>> print(f"Halo saya {nama}!")
+Halo saya Ahmad Rosid Komarudin!
+>>> 
+>>> 
+>>> data
+'192.168.1.1;cisco;cisco'
+>>> data_baru
+['192.168.1.1', 'cisco', 'cisco']
+>>> 
+>>> print(f"Login ke {data_baru[0]} dengan user {data_baru[1]} dan password {data_baru[2]}")
+Login ke 192.168.1.1 dengan user cisco dan password cisco
+>>> 
+>>> 
+>>> print("Login ke {} dengan user {} dan password {}".format(data_baru[0],data_baru[1],data_baru[2])
+... )
+Login ke 192.168.1.1 dengan user cisco dan password cisco
+>>> 
+
+
+
+
+====================================
+
+>>> 
+>>> list_ip = ["192.168.1.1","192.168.1.2"]
+>>> list_ip
+['192.168.1.1', '192.168.1.2']
+>>> 
+>>> 
+>>> list_ip.append("192.168.1.3")
+>>> 
+>>> 
+>>> list_ip
+['192.168.1.1', '192.168.1.2', '192.168.1.3']
+>>> 
+>>> 
+>>> list_ip.insert(0,"192.168.1.5")
+>>> 
+>>> list_ip
+['192.168.1.5', '192.168.1.1', '192.168.1.2', '192.168.1.3']
+>>> 
+>>> list_ip.remove("192.168.1.2")
+>>> list_ip
+['192.168.1.5', '192.168.1.1', '192.168.1.3']
+>>> 
+>>> list_ip.remove(0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: list.remove(x): x not in list
+>>> 
+>>> 
+>>> del list_ip[0]
+>>> list_ip
+['192.168.1.1', '192.168.1.3']
+>>> list_ip.remove(list_ip[0])
+>>> list_ip
+['192.168.1.3']
+>>> data_router = {"ip":"192.168.1.1", "user":"cisco", "password":"cisco"}
+>>> 
+>>> 
+>>> data_router
+{'ip': '192.168.1.1', 'user': 'cisco', 'password': 'cisco'}
+>>> 
+>>> 
+>>> data_router["ssh_port"] = 222
+>>> 
+>>> data_router
+{'ip': '192.168.1.1', 'user': 'cisco', 'password': 'cisco', 'ssh_port': 222}
+>>> 
+>>> 
+>>> 
+>>> len(list_ip)
+1
+>>> list_ip.append("192.168.1.3")
+>>> 
+>>> len(list_ip)
+2
+>>> list_ip
+['192.168.1.3', '192.168.1.3']
+>>> 
+>>> len(data_router)
+4
+>>> 
+>>> 
+>>> 
+>>> nomor = input("masukkan nomor: ")
+masukkan nomor: 123
+>>> 
+>>> type(nomor)
+<class 'str'>
+>>> 
+>>> 
+>>> nomor_baru = int(nomor)
+>>> 
+>>> nomor_baru
+123
+>>> type(nomor_baru)
+<class 'int'>
+>>> 
+>>> 
+>>> 
+>>> 
+>>> dir(data_router)
+['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+>>> data_router.popitem("ip")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: popitem() takes no arguments (1 given)
+>>> data_router.popitem()
+('ssh_port', 222)
+>>> 
+>>> data_router
+{'ip': '192.168.1.1', 'user': 'cisco', 'password': 'cisco'}
+>>> 
+>>> del data_router["ip"]
+>>> data_router
+{'user': 'cisco', 'password': 'cisco'}
+>>> a = data_router.popitem()
+>>> a
+('password', 'cisco')
+>>> 
+>>> data_router
+{'user': 'cisco'}
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> dir(list_ip)
+['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+>>> 
+>>> 
+>>> list_ip
+['192.168.1.3', '192.168.1.3']
+>>> 
+>>> 
+>>> list_ip.append("192.168.1.4")
+>>> 
+>>> list_ip
+['192.168.1.3', '192.168.1.3', '192.168.1.4']
+>>> list_ip.remove("192.168.1.4")
+>>> list_ip
+['192.168.1.3', '192.168.1.3']
+>>> 
+>>> 
+>>> list_ip.pop()
+'192.168.1.3'
+>>> list_ip
+['192.168.1.3']
+>>> list_ip.append("192.168.1.4")
+>>> list_ip
+['192.168.1.3', '192.168.1.4']
+>>> list_ip.pop(1)
+'192.168.1.4'
+>>> list_ip.append("192.168.1.4")
+>>> list_ip.append("192.168.1.5")
+>>> list_ip
+['192.168.1.3', '192.168.1.4', '192.168.1.5']
+>>> list_ip.pop(0)
+'192.168.1.3'
+>>> 
+>>> 
+>>> 
+
+
+>>> for x in range(10):
+...   print(x)
+... 
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+>>> for x in range(1,10):
+...   print(x)
+... 
+1
+2
+3
+4
+5
+6
+7
+8
+9
+>>> for x in range(1,11):
+...   print(x)
+... 
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+>>> 
+>>> for x in range(1,11,2):
+... 
+  File "<stdin>", line 2
+    
+    ^
+IndentationError: expected an indented block
+>>> for x in range(1,11,2):
+...   print(x)
+... 
+1
+3
+5
+7
+9
+>>> for x in range(2,11,2):
+...   print(x)
+... 
+2
+4
+6
+8
+10
+>>> 
+>>> 
+>>> ip_list = ['192.168.1.3', '192.168.1.4', '192.168.1.5']
+>>> 
+>>> for ip in ip_list:
+...     print(ip)
+... 
+192.168.1.3
+192.168.1.4
+192.168.1.5
+>>> 
+>>> 
+>>> for n in range len(ip_list):
+  File "<stdin>", line 1
+    for n in range len(ip_list):
+                     ^
+SyntaxError: invalid syntax
+>>> 
+>>> for n in range(len(ip_list)):
+...     print(ip_list[n])
+... 
+192.168.1.3
+192.168.1.4
+192.168.1.5
+>>> 
+>>> 
+>>> for x,y in enumerate(ip_list):
+...     print(x,y)
+... 
+0 192.168.1.3
+1 192.168.1.4
+2 192.168.1.5
+>>> 
+>>> user_list = ["cisco1","cisco2","cisco3"]
+>>> list_ip
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'list_ip' is not defined
+>>> 
+>>> 
+>>> ip_list
+['192.168.1.3', '192.168.1.4', '192.168.1.5']
+>>> user_list
+['cisco1', 'cisco2', 'cisco3']
+>>> 
+>>> 
+>>> for index,ip in enumerate(ip_list):
+...     print(f"IP {ip}, user: {user_list[index]}") 
+... 
+IP 192.168.1.3, user: cisco1
+IP 192.168.1.4, user: cisco2
+IP 192.168.1.5, user: cisco3
+>>> 
+>>> 
+>>> 
+>>> 
+>>> data_router = {"ip":"192.168.1.1", "user":"cisco", "password":"cisco"}
+>>> 
+>>> for x in data_router:
+...     print(x)
+... 
+ip
+user
+password
+>>> 
+>>> 
+>>> for x,y in data_router.items():
+...   print(x,y)
+... 
+ip 192.168.1.1
+user cisco
+password cisco
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> for x in range(10):
+...     print(x)
+...     if x == 4:
+...       break
+... 
+0
+1
+2
+3
+4
+>>> 
+>>> 
+>>> for x in range(10):
+...     if x == 4:
+...        continue
+...     print(x)
+  File "<stdin>", line 4
+    print(x)
+           ^
+IndentationError: unindent does not match any outer indentation level
+>>> 
+>>> for x in range(10):
+...   if x == 4:
+...     continue
+...   print(x)
+... 
+0
+1
+2
+3
+5
+6
+7
+8
+9
+>>> 
+>>> 
+>>> for x in range(10):
+...   if x == 4:
+...     break
+...   print(x)
+... 
+0
+1
+2
+3
+>>> 
+
+>>> def a(alas,tinggi):
+...     luas = 1/2 * alas * tinggi
+...     return luas
+... 
+>>> 
+>>> 
+>>> a(5,4)
+10.0
+>>> luas_segitiga1 = a(5,4)
+>>> luas_segitiga1
+10.0
+>>> luas_segitiga2 = a(5,19)
+>>> luas_segitiga2
+47.5
+>>> 
+>>> 
