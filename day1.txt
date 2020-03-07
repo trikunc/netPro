@@ -642,3 +642,297 @@ IndentationError: unindent does not match any outer indentation level
 47.5
 >>> 
 >>> 
+
+
+
+###############################
+Tantangan program
+
+>>> ip_list = []
+>>> 
+>>> 
+>>> 
+>>> ip_list.append("192.168.1.1")
+>>> 
+>>> 
+>>> ip_list
+['192.168.1.1']
+>>> 
+>>> 
+>>> 
+>>> ip_list2 = []
+>>> 
+>>> ip_list2.append({"ip":"192.168.1.1", "user":"cisco"})
+>>> ip_list2
+[{'ip': '192.168.1.1', 'user': 'cisco'}]
+>>> 
+
+
+
+----------- MENU ----------
+[1] Show IP Address
+[2] Insert IP Address
+[3] Edit IP Address
+[4] Delete IP Address
+[5] Exit
+PILIH MENU> 2
+
+
+IP Address: 192.168.1.1
+Username: cisco1
+Password: cisco1
+
+
+----------- MENU ----------
+[1] Show IP Address
+[2] Insert IP Address
+[3] Edit IP Address
+[4] Delete IP Address
+[5] Exit
+PILIH MENU> 1
+
+
+[0] 192.168.1.1 (cisco1/cisco1)
+[1] 192.168.1.2 (cisco2/cisco2)
+
+
+
+
+===============================
+Read Files
+
+192.168.1.1;cisco;cisco
+192.168.1.2;cisco;cisco
+192.168.1.3;cisco;cisco
+
+
+>>> 
+>>> 
+>>> 
+>>> data_router = open("ip.txt","r")
+>>> 
+>>> 
+>>> source_file = input("masukkan file ip: ")
+masukkan file ip: ip.txt
+>>> data_router = open(source_file, "r")
+KeyboardInterrupt
+>>> 
+>>> 
+>>> print(source_file)
+ip.txt
+>>> 
+>>> 
+>>> data_router = open(source_file,"r")
+>>> 
+>>> 
+>>> data_router.read()
+'192.168.1.1;cisco;cisco\n192.168.1.2;cisco;cisco\n192.168.1.3;cisco;cisco\n'
+>>> 
+>>> 
+>>> data_router.read()
+''
+>>> 
+>>> 
+>>> data_router.tell()
+72
+>>> 
+>>> data_router.seek(0)
+0
+>>> 
+>>> data_router.tell()
+0
+>>> 
+>>> data_router.read()
+'192.168.1.1;cisco;cisco\n192.168.1.2;cisco;cisco\n192.168.1.3;cisco;cisco\n'
+>>> 
+>>> 
+>>> data_router.seek(0)
+0
+>>> 
+>>> data_router.readline()
+'192.168.1.1;cisco;cisco\n'
+>>> 
+>>> data_router.read()
+'192.168.1.2;cisco;cisco\n192.168.1.3;cisco;cisco\n'
+>>> 
+>>> 
+>>> data_router.seek(0)
+0
+>>> 
+>>> data_router.tell()
+0
+>>> 
+>>> data_router.readline()
+'192.168.1.1;cisco;cisco\n'
+>>> 
+>>> data_router.tell()
+24
+>>> 
+>>> data_router.readline()
+'192.168.1.2;cisco;cisco\n'
+>>> 
+>>> data_router.tell()
+48
+>>> 
+>>> data_router.readline()
+'192.168.1.3;cisco;cisco\n'
+>>> 
+>>> 
+>>> data_router.readline()
+''
+>>> 
+>>> 
+>>> data_router.seek(0)
+0
+>>> data_router.seek(0)
+0
+>>> 
+>>> data_router.readlines()
+['192.168.1.1;cisco;cisco\n', '192.168.1.2;cisco;cisco\n', '192.168.1.3;cisco;cisco\n']
+>>> 
+>>> 
+>>> data_router.readlines()
+[]
+>>> 
+>>> 
+>>> data_router.seek(0)
+0
+>>> 
+>>> 
+>>> data = data_router.readlines()
+>>> 
+>>> print(data)
+['192.168.1.1;cisco;cisco\n', '192.168.1.2;cisco;cisco\n', '192.168.1.3;cisco;cisco\n']
+>>> 
+>>> 
+>>> 
+>>> data[0]
+'192.168.1.1;cisco;cisco\n'
+>>> 
+>>> router1 = data[0].split(";")
+>>> 
+>>> router1
+['192.168.1.1', 'cisco', 'cisco\n']
+>>> 
+>>> 
+>>> data_fix = []
+>>> 
+>>> data_fix.append({
+...     "ip_address":router1[0],
+...     "username":router1[1],
+...     "password":router1[2].strip()
+... })
+>>> 
+>>> data_fix
+[{'ip_address': '192.168.1.1', 'username': 'cisco', 'password': 'cisco'}]
+>>> 
+>>> import json
+>>> 
+>>> print(json.dumps(data_fix, indent=3))
+[
+   {
+      "ip_address": "192.168.1.1",
+      "username": "cisco",
+      "password": "cisco"
+   }
+]
+>>> 
+
+#Jika didalam file harus ada print
+
+print(data.read())
+print(data.readline())
+print(data.readlines())
+
+
+
+########################################
+>>> data
+['192.168.1.1;cisco;cisco\n', '192.168.1.2;cisco;cisco\n', '192.168.1.3;cisco;cisco\n']
+>>> 
+>>> 
+>>> data_fix = []
+>>> 
+>>> for d in data:
+...     d_ = d.split(";")
+...     data_fix.append({
+...             "ip_address":d_[0],
+...             "user":d_[1],
+...             "passw":d_[2]
+...             })
+... 
+>>> 
+>>> 
+>>> data_fix
+[{'ip_address': '192.168.1.1', 'user': 'cisco', 'passw': 'cisco\n'}, {'ip_address': '192.168.1.2', 'user': 'cisco', 'passw': 'cisco\n'}, {'ip_address': '192.168.1.3', 'user': 'cisco', 'passw': 'cisco\n'}]
+>>> 
+>>> print(json.dumps(data_fix, indent=3))
+[
+   {
+      "ip_address": "192.168.1.1",
+      "user": "cisco",
+      "passw": "cisco\n"
+   },
+   {
+      "ip_address": "192.168.1.2",
+      "user": "cisco",
+      "passw": "cisco\n"
+   },
+   {
+      "ip_address": "192.168.1.3",
+      "user": "cisco",
+      "passw": "cisco\n"
+   }
+]
+>>> 
+
+
+
+
+########################
+Read File
+import json 
+
+file_input = input("Masukkan nama file: ")
+data_input = open(file_input, "r")
+
+data = data_input.readlines()
+
+data_fix = []
+
+for d in data:
+    d_ = d.split(";")
+    data_fix.append({
+        "ip_address":d_[0],
+        "user":d_[1],
+        "passw":d_[2]
+        })
+
+print(json.dumps(data_fix, indent=3))
+
+
+
+###################################
+
+>>> file_ip = open("ip2.txt","w")
+>>> file_ip.write("192.168.1.1\n192.168.1.2\n")
+24
+>>> file_ip.close()
+>>> 
+>>> 
+>>> file_ip = open("ip2.txt","w")
+>>> file_ip.write("192.168.1.3\n")
+12
+>>> file_ip.close()
+>>> 
+>>> 
+>>> file_ip = open("ip2.txt","a")
+>>> file_ip.write("192.168.1.4\n")
+12
+>>> file_ip.close()
+>>> file_ip = open("ip2.txt","a")
+>>> file_ip.write("192.168.1.5\n")
+12
+>>> file_ip.close()
+>>> 
+

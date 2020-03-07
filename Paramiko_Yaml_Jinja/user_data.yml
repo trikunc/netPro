@@ -1,0 +1,61 @@
+- ip: 192.168.122.159
+  username: cisco
+  password: cisco
+  new_user:
+    - user: user1
+      passw: passw1
+    - user: user2
+      passw: passw2
+  new_ip:
+    - interface: lo0
+      description: dari yaml jinja
+      ip_address: 1.1.1.1 255.255.255.255
+    - interface: lo1
+      description: dari yaml jinja
+      ip_address: 2.2.2.2 255.255.255.255
+    - interface: lo2
+      description: dari yaml jinja
+      ip_address: 3.3.3.3 255.255.255.255
+    - interface: lo3
+      description: dari yaml jinja
+      ip_address: 4.4.4.4 255.255.255.255
+
+- ip: 192.168.122.226
+  username: cisco
+  password: cisco
+  new_user:
+    - user: user3
+      passw: passw3
+    - user: user4
+      passw: passw4
+    - user: user5
+      passw: passw5
+    - user: user6
+      passw: passw6
+    - user: user7
+      passw: passw7
+  new_ip:
+    - interface: lo4
+      description: dari yaml jinja
+      ip_address: 4.4.4.4 255.255.255.255
+    - interface: lo5
+      description: dari yaml jinja
+      ip_address: 5.5.5.5 255.255.255.255
+    - interface: lo6
+      description: dari yaml jinja
+      ip_address: 6.6.6.6 255.255.255.255
+    - interface: lo7
+      description: dari yaml jinja
+      ip_address: 7.7.7.7 255.255.255.255
+
+
+# - ip: 192.168.122.159
+#   username: cisco
+#   password: cisco
+#   new_user:
+#     - user: userbaru
+#       passw: passwbaru
+#     - user: userbaru2
+#       passw: passwbaru2
+#     - user: userbaru3
+#       passw: passwbaru3

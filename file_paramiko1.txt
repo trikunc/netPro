@@ -1,0 +1,105 @@
+Last login: Sun Mar  1 09:38:06 2020 from 10.46.0.216
+
+Peakflow SP v9.1
+Copyright (c) 2000-2019 Arbor Networks, Inc.  All Rights Reserved.
+
+###################################################### 
+#                  TELKOMSEL                         # 
+#    All connections to this device are monitored    # 
+######################################################
+
+ip interfaces show
+admin@addos.sp-tbs1.telkomsel.co.id:/# ip interfaces show
+eth0  Gigabit Ethernet, Interface is UP, mtu 1500
+          Hardware: 00:1E:67:C3:8F:75
+          Media: Ethernet autoselect
+          Status: 1000Mb/s Full
+          Inet: 10.38.3.40 netmask 255.255.255.192 broadcast 10.38.3.63
+          Inet6: fe80::21e:67ff:fec3:8f75 prefixlen 64
+          Input: 742229185 pkts, 547443000519 bytes, 4599 errors
+          Output: 46089912091 pkts, 23054923134027 bytes, 0 errors, 0 collisions
+          Interrupts: 6459186841
+
+eth1  Gigabit Ethernet, Interface is UP, mtu 1500
+          Hardware: 00:1E:67:C3:8F:76
+          Media: Ethernet autoselect
+          Status: 1000Mb/s Full
+          Inet: 114.120.224.10 netmask 255.255.255.248 broadcast 114.120.224.15
+          Inet6: fe80::21e:67ff:fec3:8f76 prefixlen 64
+          Input: 78097520201 pkts, 38926385966871 bytes, 0 errors
+          Output: 22359030 pkts, 5313797363 bytes, 0 errors, 0 collisions
+          Interrupts: 10905883458
+
+eth2  Gigabit Ethernet, Interface is UP, mtu 1500
+          Hardware: 00:1E:67:C3:8F:77
+          Media: Ethernet autoselect
+          Status: No carrier
+          Inet: 114.120.224.11 netmask 255.255.255.248 broadcast 114.120.224.15
+          Input: 0 pkts, 0 bytes, 0 errors
+          Output: 0 pkts, 0 bytes, 0 errors, 0 collisions
+          Interrupts: 63830144
+
+eth3  Gigabit Ethernet, Interface is DOWN, mtu 1500
+          Hardware: 00:1E:67:C3:8F:78
+          Media: Ethernet autoselect
+          Status: No carrier
+          Inet: 0.0.0.0 netmask 0.0.0.0 broadcast 
+          Input: 0 pkts, 0 bytes, 0 errors
+          Output: 0 pkts, 0 bytes, 0 errors, 0 collisions
+          Interrupts: 0
+
+eth4  Gigabit Fiber, Interface is DOWN, mtu 1500
+          Hardware: 00:E0:ED:50:C2:E7
+          Media: Fiber autoselect
+          Status: No carrier
+          Inet: 0.0.0.0 netmask 0.0.0.0 broadcast 
+          Input: 0 pkts, 0 bytes, 0 errors
+          Output: 0 pkts, 0 bytes, 0 errors, 0 collisions
+          Interrupts: 0
+
+eth5  Gigabit Fiber, Interface is DOWN, mtu 1500
+          Hardware: 00:E0:ED:50:C2:E6
+          Media: Fiber autoselect
+          Status: No carrier
+          Inet: 0.0.0.0 netmask 0.0.0.0 broadcast 
+          Input: 0 pkts, 0 bytes, 0 errors
+          Output: 0 pkts, 0 bytes, 0 errors, 0 collisions
+          Interrupts: 0
+
+eth6  Gigabit Fiber, Interface is DOWN, mtu 1500
+          Hardware: 00:E0:ED:50:C2:E5
+          Media: Fiber autoselect
+          Status: No carrier
+          Inet: 0.0.0.0 netmask 0.0.0.0 broadcast 
+          Input: 0 pkts, 0 bytes, 0 errors
+          Output: 0 pkts, 0 bytes, 0 errors, 0 collisions
+          Interrupts: 0
+
+eth7  Gigabit Fiber, Interface is DOWN, mtu 1500
+          Hardware: 00:E0:ED:50:C2:E4
+          Media: Fiber autoselect
+          Status: No carrier
+          Inet: 0.0.0.0 netmask 0.0.0.0 broadcast 
+          Input: 0 pkts, 0 bytes, 0 errors
+          Output: 0 pkts, 0 bytes, 0 errors, 0 collisions
+          Interrupts: 0
+
+eth8  Ten Gigabit Ethernet, Interface is DOWN, mtu 1500
+          Hardware: 00:E0:ED:51:4D:5F
+          Media: Ethernet 
+          Status: No carrier
+          Inet: 0.0.0.0 netmask 0.0.0.0 broadcast 
+          Input: 0 pkts, 0 bytes, 0 errors
+          Output: 0 pkts, 0 bytes, 0 errors, 0 collisions
+          Interrupts: 0
+
+eth9  Ten Gigabit Ethernet, Interface is DOWN, mtu 1500
+          Hardware: 00:E0:ED:51:4D:5E
+          Media: Ethernet 
+          Status: No carrier
+          Inet: 0.0.0.0 netmask 0.0.0.0 broadcast 
+          Input: 0 pkts, 0 bytes, 0 errors
+          Output: 0 pkts, 0 bytes, 0 errors, 0 collisions
+          Interrupts: 0
+
+admin@addos.sp-tbs1.telkomsel.co.id:/# 

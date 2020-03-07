@@ -1,0 +1,9 @@
+{% for u in list_users %}
+username {{ u.user }} password {{ u.passw }}
+{% endfor %}
+
+{% for u in interface_list %}
+interface {{ u.interface }}
+description {{ u.description }}
+ip address {{ u.ip_address }}
+{% endfor %}
