@@ -1,0 +1,250 @@
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git init .
+Initialized empty Git repository in /Users/arrosid/NetDev/NetProg/paramiko_yaml_jinja_user/.git/
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	paramiko_yaml_jinja_user.py
+	paramiko_yaml_jinja_user_2.py
+	template_user.j2
+	template_user2.j2
+	user-data.yml
+	user-data2.yml
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git add .
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   paramiko_yaml_jinja_user.py
+	new file:   paramiko_yaml_jinja_user_2.py
+	new file:   template_user.j2
+	new file:   template_user2.j2
+	new file:   user-data.yml
+	new file:   user-data2.yml
+
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git commit -m "First Commit"
+[master (root-commit) 4bb77d9] First Commit
+ 6 files changed, 136 insertions(+)
+ create mode 100644 paramiko_yaml_jinja_user.py
+ create mode 100644 paramiko_yaml_jinja_user_2.py
+ create mode 100644 template_user.j2
+ create mode 100644 template_user2.j2
+ create mode 100644 user-data.yml
+ create mode 100644 user-data2.yml
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git status
+On branch master
+nothing to commit, working tree clean
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git log 
+commit 4bb77d9afb6ee034eb17b4093428aaf1fba441a1 (HEAD -> master)
+Author: ArRosid <ahmadrosid30121997@gmail.com>
+Date:   Sat Mar 7 13:46:32 2020 +0700
+
+    First Commit
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   user-data2.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git diff
+diff --git a/user-data2.yml b/user-data2.yml
+index d49ae8b..eeb4eb9 100644
+--- a/user-data2.yml
++++ b/user-data2.yml
+@@ -6,6 +6,8 @@
+       passw: passw1
+     - user: user2
+       passw: passw2
++    - user: user3
++      passw: passw3
+ 
+ - ip: 192.168.122.226
+   username: cisco
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git diff
+diff --git a/user-data2.yml b/user-data2.yml
+index d49ae8b..b3c4812 100644
+--- a/user-data2.yml
++++ b/user-data2.yml
+@@ -4,8 +4,8 @@
+   new_user:
+     - user: user1
+       passw: passw1
+-    - user: user2
+-      passw: passw2
++    - user: user3
++      passw: passw3
+ 
+ - ip: 192.168.122.226
+   username: cisco
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   user-data2.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git add user-data2.yml 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git commit -m "add new user to first router"
+[master b9056ad] add new user to first router
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git status
+On branch master
+nothing to commit, working tree clean
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git log
+commit b9056ad14b08bf7912b16666fbd894c1c5e6e951 (HEAD -> master)
+Author: ArRosid <ahmadrosid30121997@gmail.com>
+Date:   Sat Mar 7 13:48:20 2020 +0700
+
+    add new user to first router
+
+commit 4bb77d9afb6ee034eb17b4093428aaf1fba441a1
+Author: ArRosid <ahmadrosid30121997@gmail.com>
+Date:   Sat Mar 7 13:46:32 2020 +0700
+
+    First Commit
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git log --oneline
+b9056ad (HEAD -> master) add new user to first router
+4bb77d9 First Commit
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   user-data2.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git diff
+diff --git a/user-data2.yml b/user-data2.yml
+index b3c4812..f9f679a 100644
+--- a/user-data2.yml
++++ b/user-data2.yml
+@@ -28,6 +28,9 @@
+     - interface: lo0
+       description: dari yaml jinja
+       ip_address: 1.1.1.1 255.255.255.255
++    - interface: lo0
++      description: dari yaml jinja
++      ip_address: 1.1.1.1 255.255.255.255
+ 
+ - ip: 192.168.122.159
+   username: cisco
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git add user-data2.yml 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git commit -m "add new ip to second router"
+[master 5756977] add new ip to second router
+ 1 file changed, 3 insertions(+)
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git status
+On branch master
+nothing to commit, working tree clean
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git log --oneline
+5756977 (HEAD -> master) add new ip to second router
+b9056ad add new user to first router
+4bb77d9 First Commit
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git diff 4bb77d9 5756977
+diff --git a/user-data2.yml b/user-data2.yml
+index d49ae8b..f9f679a 100644
+--- a/user-data2.yml
++++ b/user-data2.yml
+@@ -4,8 +4,8 @@
+   new_user:
+     - user: user1
+       passw: passw1
+-    - user: user2
+-      passw: passw2
++    - user: user3
++      passw: passw3
+ 
+ - ip: 192.168.122.226
+   username: cisco
+@@ -28,6 +28,9 @@
+     - interface: lo0
+       description: dari yaml jinja
+       ip_address: 1.1.1.1 255.255.255.255
++    - interface: lo0
++      description: dari yaml jinja
++      ip_address: 1.1.1.1 255.255.255.255
+ 
+ - ip: 192.168.122.159
+   username: cisco
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git log --oneline
+5756977 (HEAD -> master) add new ip to second router
+b9056ad add new user to first router
+4bb77d9 First Commit
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git checkout 4bb77d9
+Note: checking out '4bb77d9'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 4bb77d9 First Commit
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git status
+HEAD detached at 4bb77d9
+nothing to commit, working tree clean
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git log --oneline
+4bb77d9 (HEAD) First Commit
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git checkout 5756977
+Previous HEAD position was 4bb77d9 First Commit
+HEAD is now at 5756977 add new ip to second router
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ git log --oneline
+5756977 (HEAD, master) add new ip to second router
+b9056ad add new user to first router
+4bb77d9 First Commit
+(base) Ahmads-MacBook-Air:paramiko_yaml_jinja_user arrosid$ 

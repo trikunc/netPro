@@ -1,0 +1,249 @@
+from jumpssh import SSHSession
+
+gateway_session = SSHSession("192.168.100.4","netprog",password="netprog").open()
+remote_session = gateway_session.get_remote_session("192.168.122.226", "cisco", password="cisco")
+print(remote_session.get_cmd_output("sho ip int br"))
+
+
+
+(base) Ahmads-MacBook-Air:NetProg arrosid$ python
+Python 3.7.3 (default, Mar 27 2019, 16:54:48) 
+[Clang 4.0.1 (tags/RELEASE_401/final)] :: Anaconda, Inc. on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> remote_hostname = ['MikroTik\r', 'MikroTik\r', 'MikroTik\r', 'IOU9.idn.id\r', 'IOU8.idn.id\r', 'IOU5.idn.id\r', 'IOU4.idn.id\r', 'IOU7.idn.id\r', 'IOU1.idn.id\r', 'IOU2.idn.id\r', 'IOU12.idn.id\r', 'IOU13.idn.id\r']
+>>> local_int = ['Ethernet0/0', 'Ethernet0/0', 'Ethernet0/0', 'Ethernet0/0', 'Ethernet0/0', 'Ethernet0/0', 'Ethernet0/0', 'Ethernet0/0', 'Ethernet0/0', 'Ethernet0/0', 'Ethernet0/0', 'Ethernet0/0']
+>>> remote_int = ['ether1\r', 'ether1\r', 'ether1\r', 'Ethernet0/0\r', 'Ethernet0/0\r', 'Ethernet0/0\r', 'Ethernet0/0\r', 'Ethernet0/0\r', 'Ethernet0/0\r', 'Ethernet0/0\r', 'Ethernet0/0\r', 'Ethernet0/0\r']
+>>> remote_ip ['192.168.122.11\r', '192.168.122.88\r', '192.168.122.140\r', '192.168.122.231\r', '192.168.122.158\r', '192.168.122.18\r', '192.168.122.119\r', '192.168.122.85\r', '192.168.122.159\r', '192.168.122.226\r', '192.168.122.197\r', '192.168.122.17\r']
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'remote_ip' is not defined
+>>> remote_ip = ['192.168.122.11\r', '192.168.122.88\r', '192.168.122.140\r', '192.168.122.231\r', '192.168.122.158\r', '192.168.122.18\r', '192.168.122.119\r', '192.168.122.85\r', '192.168.122.159\r', '192.168.122.226\r', '192.168.122.197\r', '192.168.122.17\r']
+>>> remote_platform = ['MikroTik', 'MikroTik', 'MikroTik', 'Linux Unix', 'Linux Unix', 'Linux Unix', 'Linux Unix', 'Linux Unix', 'Linux Unix', 'Linux Unix', 'Linux Unix', 'Linux Unix']
+>>> 
+>>> 
+>>> print(remote_hostname)
+['MikroTik\r', 'MikroTik\r', 'MikroTik\r', 'IOU9.idn.id\r', 'IOU8.idn.id\r', 'IOU5.idn.id\r', 'IOU4.idn.id\r', 'IOU7.idn.id\r', 'IOU1.idn.id\r', 'IOU2.idn.id\r', 'IOU12.idn.id\r', 'IOU13.idn.id\r']
+>>> 
+>>> all_data = []
+>>> 
+>>> 
+>>> all_neighbor = []
+>>> 
+>>> 
+>>> for index,r_hostname in enumerate(remote_hostname):
+...     all_neighbor.append(
+...             {
+...                     "remote_hostname": r_hostname,
+...                     "local_int":local_int[index],
+...                     "remote_int":remote_int[index],
+...                     "remote_ip":remote_ip[index],
+...                     "remote_platform":remote_platform[index]
+...             })
+... 
+>>> 
+>>> 
+>>> import json
+>>> 
+>>> print(json.dumps(all_neighbor, indent=3))
+[
+   {
+      "remote_hostname": "MikroTik\r",
+      "local_int": "Ethernet0/0",
+      "remote_int": "ether1\r",
+      "remote_ip": "192.168.122.11\r",
+      "remote_platform": "MikroTik"
+   },
+   {
+      "remote_hostname": "MikroTik\r",
+      "local_int": "Ethernet0/0",
+      "remote_int": "ether1\r",
+      "remote_ip": "192.168.122.88\r",
+      "remote_platform": "MikroTik"
+   },
+   {
+      "remote_hostname": "MikroTik\r",
+      "local_int": "Ethernet0/0",
+      "remote_int": "ether1\r",
+      "remote_ip": "192.168.122.140\r",
+      "remote_platform": "MikroTik"
+   },
+   {
+      "remote_hostname": "IOU9.idn.id\r",
+      "local_int": "Ethernet0/0",
+      "remote_int": "Ethernet0/0\r",
+      "remote_ip": "192.168.122.231\r",
+      "remote_platform": "Linux Unix"
+   },
+   {
+      "remote_hostname": "IOU8.idn.id\r",
+      "local_int": "Ethernet0/0",
+      "remote_int": "Ethernet0/0\r",
+      "remote_ip": "192.168.122.158\r",
+      "remote_platform": "Linux Unix"
+   },
+   {
+      "remote_hostname": "IOU5.idn.id\r",
+      "local_int": "Ethernet0/0",
+      "remote_int": "Ethernet0/0\r",
+      "remote_ip": "192.168.122.18\r",
+      "remote_platform": "Linux Unix"
+   },
+   {
+      "remote_hostname": "IOU4.idn.id\r",
+      "local_int": "Ethernet0/0",
+      "remote_int": "Ethernet0/0\r",
+      "remote_ip": "192.168.122.119\r",
+      "remote_platform": "Linux Unix"
+   },
+   {
+      "remote_hostname": "IOU7.idn.id\r",
+      "local_int": "Ethernet0/0",
+      "remote_int": "Ethernet0/0\r",
+      "remote_ip": "192.168.122.85\r",
+      "remote_platform": "Linux Unix"
+   },
+   {
+      "remote_hostname": "IOU1.idn.id\r",
+      "local_int": "Ethernet0/0",
+      "remote_int": "Ethernet0/0\r",
+      "remote_ip": "192.168.122.159\r",
+      "remote_platform": "Linux Unix"
+   },
+   {
+      "remote_hostname": "IOU2.idn.id\r",
+      "local_int": "Ethernet0/0",
+      "remote_int": "Ethernet0/0\r",
+      "remote_ip": "192.168.122.226\r",
+      "remote_platform": "Linux Unix"
+   },
+   {
+      "remote_hostname": "IOU12.idn.id\r",
+      "local_int": "Ethernet0/0",
+      "remote_int": "Ethernet0/0\r",
+      "remote_ip": "192.168.122.197\r",
+      "remote_platform": "Linux Unix"
+   },
+   {
+      "remote_hostname": "IOU13.idn.id\r",
+      "local_int": "Ethernet0/0",
+      "remote_int": "Ethernet0/0\r",
+      "remote_ip": "192.168.122.17\r",
+      "remote_platform": "Linux Unix"
+   }
+]
+>>> 
+
+
+
+=------------------------------
+
+ubuntu@ubuntu:~$ mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 4
+Server version: 5.7.29-0ubuntu0.16.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create database netprog;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> use netprog;
+Database changed
+mysql> 
+mysql> 
+mysql> 
+mysql> 
+CREATE TABLE Devices3 (
+id INT(6) AUTO_INCREMENT PRIMARY KEY,
+ip_address VARCHAR(255),
+username VARCHAR(255),
+password VARCHAR(255)
+);
+        Query OK, 0 rows affected (0.00 sec)
+ 
+SHOW TABLES;
++-------------------+
+| Tables_in_netprog |
++-------------------+
+| Devices           |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> 
+mysql> DESCRIBE Devices;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id         | int(6)       | NO   | PRI | NULL    | auto_increment |
+| ip_address | varchar(255) | YES  |     | NULL    |                |
+| username   | varchar(255) | YES  |     | NULL    |                |
+| password   | varchar(255) | YES  |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> 
+mysql> 
+INSERT INTO Devices3(ip_address, username, password) VALUES ('192.168.122.12','cisco','cisco');
+INSERT INTO Devices3(ip_address, username, password) VALUES ('192.168.122.10','cisco','cisco');
+INSERT INTO Devices3(ip_address, username, password) VALUES ('192.168.122.11','cisco','cisco');
+SELECT * FROM Devices3;
++----+----------------+----------+----------+
+| id | ip_address     | username | password |
++----+----------------+----------+----------+
+|  1 | 192.168.122.12 | cisco    | cisco    |
+|  2 | 192.168.122.10 | cisco    | cisco    |
+|  3 | 192.168.122.11 | cisco    | cisco    |
++----+----------------+----------+----------+
+3 rows in set (0.00 sec)
+
+UPDATE Devices3 SET username='cisco3' WHERE id=2;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> 
+mysql> SELECT * FROM Devices;
++----+----------------+----------+----------+
+| id | ip_address     | username | password |
++----+----------------+----------+----------+
+|  1 | 192.168.122.12 | cisco2   | cisco    |
+|  2 | 192.168.122.10 | cisco    | cisco    |
+|  3 | 192.168.122.11 | cisco    | cisco    |
++----+----------------+----------+----------+
+3 rows in set (0.00 sec)
+
+mysql> quit
+Bye
+ubuntu@ubuntu:~$ 
+ubuntu@ubuntu:~$ 
+
+----------------------------------------
+
+pip install pymysql
+
+import pymysql
+
+sqlconn = pymysql.connect('192.168.100.87','root','ubuntu','netprog')
+
+cursor = sqlconn.cursor(pymysql.cursors.DictCursor)
+
+ip_address = "192.168.122.113"
+username = "cisco"
+password = "cisco"
+
+cursor.execute("INSERT INTO Devices(ip_address, username, password) VALUES ('{}','{}','{}')".format(ip_address, username, password))
+
+sqlconn.commit()
+
+cursor.execute("SELECT * FROM Devices")
+
+data = cursor.fetchall()
+
+from pprint import pprint
+pprint(data)

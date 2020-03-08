@@ -1,0 +1,17 @@
+---
+- name: Backup Configuration
+  hosts: all
+  gather_facts: false
+  connection: local
+
+  tasks:
+    - name: Back up config
+      ios_command:
+        username: cisco
+        password: cisco
+        commands: show run
+
+      register: print_out
+    # - debug: var=print_out
+    - copy: content="{{ print_out.stdout[0] }}"
+            dest="config_{{ inventory_hostname }}.cfg"

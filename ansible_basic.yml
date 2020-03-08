@@ -1,0 +1,19 @@
+---
+- name: Playbook 1
+  hosts: group1
+  connection: local
+  gather_facts: false
+
+  tasks:
+  - name: Configure Loopback 0
+    ios_config:
+      username: cisco
+      password: cisco
+      parents: interface loopback173
+      lines:
+      - ip address 173.16.3.3 255.255.255.255
+      - description from ansible
+
+    register: hasil
+
+  - debug: var=hasil

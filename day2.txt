@@ -1,0 +1,59 @@
+>>> 
+>>> def tambah(angka1,angka2,angka3):
+...     hasil = angka1 + angka2 + angka3
+...     return hasil
+... 
+>>> 
+>>> 
+>>> tambah(10,20,30)
+60
+>>> 
+>>> 
+>>> 
+>>> 
+>>> def tambah(**angka):
+...     hasil = angka["angka1"] + angka["angka2"] + angka[
+... "angka3"]
+...     return hasil
+... 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> data = {
+...     "angka1": 10,
+...     "angka2": 20,
+...     "angka3": 30,
+...     }
+>>> 
+>>> 
+>>> tambah(**data)
+60
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> def tambah(**angka):
+...     hasil = angka["angka1"] + angka["angka2"] + angka["angka3"]
+...     return hasil
+... 
+>>> 
+>>> 
+>>> import json
+>>> 
+>>> print(json.dumps(data, indent=3))
+{
+   "angka1": 10,
+   "angka2": 20,
+   "angka3": 30
+}
+>>> 
+>>> 
+>>> tambah(**data)
+60
+>>> 
+>>> 
+
+

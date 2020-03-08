@@ -6,6 +6,8 @@
       passw: passw1
     - user: user2
       passw: passw2
+    - user: user3
+      passw: passw3
   new_ip:
     - interface: lo0
       description: dari yaml jinja
