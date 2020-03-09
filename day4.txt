@@ -241,7 +241,7 @@ cursor.execute("INSERT INTO Devices(ip_address, username, password) VALUES ('{}'
 
 sqlconn.commit()
 
-cursor.execute("SELECT * FROM Devices")
+cursor.execute("SELECT * FROM Devices3")
 
 data = cursor.fetchall()
 
